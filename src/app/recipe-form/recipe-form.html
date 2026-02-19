@@ -1,0 +1,19 @@
+<h2>{{editMode ? 'Edit Recipe' : 'New Recipe'}}</h2>
+
+<form [formGroup]="recipeForm" (ngSubmit)="submit()">
+
+    <label>Name</label>
+    <input formControlName="name">
+
+    <label>Description</label>
+    <input formControlName="description">
+
+    <label>Ingredients (comma separated)</label>
+    <input formControlName="ingredients">
+
+    <label>Instructions</label>
+    <textarea formControlName="instructions"></textarea>
+
+    <button type="submit">Save</button>
+
+</form>

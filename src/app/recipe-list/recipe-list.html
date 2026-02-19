@@ -1,0 +1,11 @@
+<h2>Recipes</h2>
+
+<button routerLink="/recipes/new">Add Recipes</button>
+
+<ul>
+    <li *ngFor="let recipe of recipes">
+        <strong>{{recipe.name}}</strong> - {{recipe.description}}
+        <button (click)="viewRecipe(recipe.id)">View</button>
+        <button (click)="deleteRecipe(recipe.id)">Delete</button>
+    </li>
+</ul>
